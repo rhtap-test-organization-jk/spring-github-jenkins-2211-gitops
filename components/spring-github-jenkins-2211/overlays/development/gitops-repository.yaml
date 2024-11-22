@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: spring-github-jenkins-2211-gitops-repository
+spec:
+  url: https://github.com/rhtap-test-organization-jk/spring-github-jenkins-2211-gitops

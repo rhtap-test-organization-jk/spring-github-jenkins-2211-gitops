@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: spring-github-jenkins-2211
+  janus-idp.io/tekton: spring-github-jenkins-2211
+  backstage.io/kubernetes-id: spring-github-jenkins-2211
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: spring-github-jenkins-2211
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml

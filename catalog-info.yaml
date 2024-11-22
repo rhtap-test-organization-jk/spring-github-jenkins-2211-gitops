@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: spring-github-jenkins-2211-gitops
+  description: This is GitOps manifest for spring-github-jenkins-2211   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: spring-github-jenkins-2211
+    backstage.io/kubernetes-id: spring-github-jenkins-2211 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: spring-github-jenkins-2211-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:spring-github-jenkins-2211
